@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Add Music Album</title>
+</head>
+<body>
+<center><h1>Add Music Album</h1></center>
+<f:view>
+	<label>Enter the Following to add Music Album</label>
+	</br>
+	<h:form id="AddAlbum">
+	<label>Album Title: </label>
+	</br>
+	<h:inputText id="AlbumTitle" value="#{album.title}" requiredMessage="Album Title is required"></h:inputText>
+	</br>
+	<label>Artist Name: </label>
+	</br>
+	<h:inputText id="ArtistName" value="#{album.artist}" requiredMessage="Artist Name is required"></h:inputText>
+	</br>
+	<label>Year :</label>
+	</br>
+	<h:inputText id="YearEst" value="#{album.year}" requiredMessage="Year is required"></h:inputText>
+	</br>
+	<h:commandButton id="album-Find" value = "#{AlbumController.onFind(album)}" action="AddResponse.xhtml"/>
+	</br>
+	<h:commandButton id="submit-Button" value = "#{AlbumController.onSubmit(album)}" action="AddResponse.xhtml"/>
+	</h:form>
+
+</f:view>
+</body>
+</html>
